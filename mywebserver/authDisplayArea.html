@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            loadLogin()
+            {
+                var httpReq=new XMLHttpRequest();
+                httpReq.onreadyStateChange=callback;
+                httpReq.open("Get","login.html",true);
+                httpReq.send();
+                function callback()
+                {
+                    if(httpReq.readyState==4 && httpReq.status==200)
+                    {
+                        document.getElementById("display Area").innerHTML=httpReq.responseText;
+                    }
+                }
+            }
+
+            </script>
+    </head>
+</html>
